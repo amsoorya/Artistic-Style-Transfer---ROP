@@ -1,0 +1,87 @@
+ROP Feature Comparison Report
+==============================
+
+Feature: Vessel Density
+----------------------------------------
+Rop Image Statistics:
+  Mean: 0.2890
+  Std Dev: 0.3793
+  Min: 0.0000
+  Max: 1.0000
+
+Synthetic_rop Image Statistics:
+  Mean: 0.0032
+  Std Dev: 0.0068
+  Min: 0.0000
+  Max: 0.0358
+
+Feature: Vessel Tortuosity
+----------------------------------------
+Rop Image Statistics:
+  Mean: 0.0000
+  Std Dev: 0.0000
+  Min: 0.0000
+  Max: 0.0000
+
+Synthetic_rop Image Statistics:
+  Mean: 0.0000
+  Std Dev: 0.0000
+  Min: 0.0000
+  Max: 0.0000
+
+Feature: Branching Points
+----------------------------------------
+Rop Image Statistics:
+  Mean: 0.0000
+  Std Dev: 0.0000
+  Min: 0.0000
+  Max: 0.0000
+
+Synthetic_rop Image Statistics:
+  Mean: 0.0000
+  Std Dev: 0.0000
+  Min: 0.0000
+  Max: 0.0000
+
+Feature: Neovascularization Score
+----------------------------------------
+Rop Image Statistics:
+  Mean: 16581.2100
+  Std Dev: 6193.7562
+  Min: 7036.0000
+  Max: 34278.0000
+
+Synthetic_rop Image Statistics:
+  Mean: 13728.5400
+  Std Dev: 4731.1132
+  Min: 7036.0000
+  Max: 24214.0000
+
+Feature: Disk Diameter
+----------------------------------------
+Rop Image Statistics:
+  Mean: 507.3363
+  Std Dev: 81.5869
+  Min: 409.2393
+  Max: 879.3397
+
+Synthetic_rop Image Statistics:
+  Mean: 510.7338
+  Std Dev: 100.2027
+  Min: 409.2393
+  Max: 879.3397
+
+Feature: Disk Circularity
+----------------------------------------
+Rop Image Statistics:
+  Mean: 0.0566
+  Std Dev: 0.0144
+  Min: 0.0232
+  Max: 0.0857
+
+Synthetic_rop Image Statistics:
+  Mean: 0.0549
+  Std Dev: 0.0137
+  Min: 0.0232
+  Max: 0.0857
+
