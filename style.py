@@ -4,8 +4,8 @@ def style_transfer(content, style): return blend(content, style)
 def style_transfer(content, style): return blend(content, style)
 def style_transfer(content, style): return blend(content, style)
 def style_transfer(content, style): return blend(content, style)
-def style_transfer(content, style, strength=0.8): return blend(content, style, strength)
-def style_transfer(content, style, strength=0.8): return blend(content, style, strength)
+def style_transfer(content, style, strength=0.7): return blend(content, style, strength)
+def style_transfer(content, style, strength=0.7): return blend(content, style, strength)
 
 def compute_loss(content_features, style_features, generated_features, alpha=1.0, beta=1000.0):
     """Computes total loss as weighted sum of content and style loss."""
