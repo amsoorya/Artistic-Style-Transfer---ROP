@@ -1,0 +1,42 @@
+name: Doc Agent Notification
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main, dev, master]
+
+jobs:
+  notify:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Post doc agent comment
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const prTitle = context.payload.pull_request.title;
+            const author = context.payload.pull_request.user.login;
+            const repo = context.payload.repository.name;
+            const docUrl = "https://improvise-pastel-undusted.ngrok-free.dev/ui";
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body: `## 📄 Documentation Agent
+
+Hey @${author}! PR **#${prNumber} — ${prTitle}** has been merged and documentation is being auto-generated.
+
+**Want to add extras to the doc?**
+- 📎 Upload images or PDFs
+- 🔗 Add reference links  
+- 📝 Add research notes
+- 📁 Choose where it goes in the doc tree
+
+👉 **[Open Doc Agent UI](${docUrl}?pr=${prNumber}&repo=${repo}&title=${encodeURIComponent(prTitle)}&author=${author})**
+
+> The base doc is already being generated. This link lets you enrich it with your research.`
+            });
