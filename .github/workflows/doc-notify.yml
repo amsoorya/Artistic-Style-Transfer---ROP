@@ -22,21 +22,25 @@ jobs:
             const repo = context.payload.repository.name;
             const docUrl = "https://improvise-pastel-undusted.ngrok-free.dev/ui";
 
+            const bodyText = [
+              "## 📄 Documentation Agent",
+              "",
+              `Hey @${author}! PR **#${prNumber} — ${prTitle}** has been merged and documentation is being auto-generated.`,
+              "",
+              "**Want to add extras to the doc?**",
+              "- 📎 Upload images or PDFs",
+              "- 🔗 Add reference links  ",
+              "- 📝 Add research notes",
+              "- 📁 Choose where it goes in the doc tree",
+              "",
+              `👉 **[Open Doc Agent UI](${docUrl}?pr=${prNumber}&repo=${repo}&title=${encodeURIComponent(prTitle)}&author=${author})**`,
+              "",
+              "> The base doc is already being generated. This link lets you enrich it with your research."
+            ].join('\n');
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: prNumber,
-              body: `## 📄 Documentation Agent
-
-Hey @${author}! PR **#${prNumber} — ${prTitle}** has been merged and documentation is being auto-generated.
-
-**Want to add extras to the doc?**
-- 📎 Upload images or PDFs
-- 🔗 Add reference links  
-- 📝 Add research notes
-- 📁 Choose where it goes in the doc tree
-
-👉 **[Open Doc Agent UI](${docUrl}?pr=${prNumber}&repo=${repo}&title=${encodeURIComponent(prTitle)}&author=${author})**
-
-> The base doc is already being generated. This link lets you enrich it with your research.`
+              body: bodyText
             });
