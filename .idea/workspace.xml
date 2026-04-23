@@ -17,9 +17,9 @@
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="3ChjkB1RhtU3vLUvLoEpf9FN3mG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,7 +35,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "test__4",
+    "git-widget-placeholder": "test__6",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/jayasoorya/Desktop/Artistic-Style-Transfer---ROP",
     "to.speed.mode.migration.done": "true"
